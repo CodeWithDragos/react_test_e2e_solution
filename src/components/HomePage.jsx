@@ -25,14 +25,14 @@ function HomePage() {
       <h1>My fancy blog</h1>
       {postList.map((post) => {
         return (
-          <StyledLink to={`/post/${post.id}`} key={post.id}>
+          <StyledLink to={`/post/${post.id}`} key={post.id} data-cy={`link-post-${post.id}`}>
             <PostTitle data-testid={`title-${post.id}`}>{post.title}</PostTitle>
             <PostDescription data-testid={`description-${post.id}`}>{post.description}</PostDescription>
           </StyledLink>
         );
       })}
       <Link to="/create-post">
-        <CTAButton>Add Post</CTAButton>
+        <CTAButton data-cy={"add-post-button"}>Add Post</CTAButton>
       </Link>
     </Container>
   );

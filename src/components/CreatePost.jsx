@@ -35,18 +35,18 @@ export default () => {
         >
           <FieldContainer>
             <FormLabel>Title:</FormLabel>
-            <Input name="title"></Input>
+            <Input name="title" data-cy="input-title"></Input>
           </FieldContainer>
           <FieldContainer>
             <FormLabel>Description:</FormLabel>
-            <TextArea name="description"></TextArea>
+            <TextArea name="description" data-cy="input-description"></TextArea>
           </FieldContainer>
-          <CTAButton type="submit">Submit</CTAButton>
+          <CTAButton type="submit" data-cy="submit-btn">Submit</CTAButton>
         </form>
       ) : (
         <div>Post was created!</div>
       )}
-      <Link to="/">Go Back Home</Link>
+      <Link to="/" data-cy="go-back-link">Go Back Home</Link>
     </div>
   );
 };
